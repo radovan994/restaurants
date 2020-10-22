@@ -1,0 +1,18 @@
+<div class="row" style="height: 10px;"></div>
+<div class="row">
+
+    
+    <ngb-pagination class="col-4" [maxSize] = "3" [rotate]="true" (pageChange)="changePage($event)" [collectionSize]="restaurants?.count" [boundaryLinks]="true" [directionLinks]="true" [pageSize]="parameters.pageSize"></ngb-pagination>
+   
+    <p class="col-2" style="font-weight:bold;text-align:right; text-transform: capitalize; padding-top: 5px; ">Price range: </p>
+    <input class="col-2" style="height: 40px;" placeholder="min" type="number" [(ngModel)]="parameters.filter.priceFrom" (change)="update()">
+    <input class="col-2" style="height: 40px;" placeholder="max" type="number" [(ngModel)]="parameters.filter.priceTo" (change)="update()">
+    <p class="col-1" style="font-weight:bold;text-align:right; text-transform: capitalize; padding-top: 5px; ">Page size: </p>
+    <input class="col-1" style="height: 40px;" type="number" [(ngModel)]="parameters.pageSize" (change)="update()">
+</div>
+
+<div class="row">
+    <div class="col-4" *ngFor="let item of restaurants?.results">
+        <app-item [restaurant]="item"></app-item>
+    </div>
+</div>

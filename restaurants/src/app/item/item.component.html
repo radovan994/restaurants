@@ -1,0 +1,9 @@
+<h4 style="cursor: pointer; color:orange" (click)="openModal()">{{restaurant.name}}</h4>
+<p>{{restaurant.description}}</p>
+<p>Cuisine: {{restaurant.cuisine}}</p>
+<p>Price: 
+    <app-rating [grade] = "restaurant.price" [fullIcon] = "'coin-full.png'" [emptyIcon] = "'coin-empty.png'"></app-rating>
+</p>
+<p>Rating: 
+    <app-rating [grade] = "restaurant.rating" [fullIcon] = "'star-full.png'" [emptyIcon] = "'star-empty.png'"></app-rating>
+</p>

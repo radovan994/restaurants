@@ -1,0 +1,34 @@
+<div class="d-flex">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+        <li ngbNavItem="other">
+            <a ngbNavLink [routerLink]="[ 'home' ]">Home</a>
+          </li>
+        <li ngbNavItem="bottom">
+            <a ngbNavLink [routerLink]="[ 'restaurants/all' ]">All Restaurants</a>
+          </li>
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel title="Cuisines">
+    <ng-template ngbPanelContent>
+      <li ngbNavItem="">
+        <a ngbNavLink [routerLink]="[ 'restaurants/american' ]">American</a>
+      </li>
+      <li ngbNavItem="">
+        <a ngbNavLink [routerLink]="[ 'restaurants/chinese' ]">Chinese</a>
+      </li>
+      <li ngbNavItem="">
+        <a ngbNavLink [routerLink]="[ 'restaurants/german' ]">German</a>
+      </li>
+      <li ngbNavItem="">
+        <a ngbNavLink [routerLink]="[ 'restaurants/indian' ]">Indian</a>
+      </li>
+      <li ngbNavItem="">
+        <a ngbNavLink [routerLink]="[ 'restaurants/pizza' ]">Pizza</a>
+      </li>
+      <li ngbNavItem="">
+        <a ngbNavLink [routerLink]="[ 'restaurants/vegetarian' ]">Vegetarian</a>
+      </li>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+</ul>
+  
