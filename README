@@ -1,7 +1,0 @@
-Simple Angular app displaying restaurants and tjeir info pulled from local server
-
-Install node modules
-
-run server with npm install
-
-rup app with ng serve
